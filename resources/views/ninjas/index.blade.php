@@ -6,10 +6,11 @@
 </head>
 <body>
   <h2>Current available ninjas</h2>
+  <p>{{ $greeting }}</p>
   <ul>
-    <li>Ninja 1</li>
-    <li>Ninja 2</li>
-    <li>Ninja 3</li>
+    @foreach ($ninjas as $ninja)
+    <li><a href="/ninjas/{{ $ninja['id'] }}">{{ $ninja['name'] }}</a></li>
+    @endforeach
   </ul>
 </body>
 </html>
