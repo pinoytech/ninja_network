@@ -20,6 +20,10 @@ Route::get('/ninjas', function () {
     );
 });
 
+Route::get('/ninjas/create', function () {
+    return view('ninjas.create');
+});
+
 Route::get('/ninjas/{id}', function ($id) {
     // $ninjas = [
     //     '1' => ['name' => 'Naruto', 'skill' => 75, 'id' => '1'],
